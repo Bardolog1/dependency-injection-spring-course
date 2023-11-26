@@ -2,8 +2,10 @@ package com.bardolog.sprinboot.di.app.models.domain;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 
 @Component
+@RequestScope // cliente por cada petición 
 public class Client {
 	
 	@Value("${client.name}")
