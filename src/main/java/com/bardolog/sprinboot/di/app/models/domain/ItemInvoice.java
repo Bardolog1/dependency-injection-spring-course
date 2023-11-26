@@ -4,9 +4,16 @@ public class ItemInvoice {
 	
 	private Product product;
 	private Integer count;
+	
+	public ItemInvoice(Product product, Integer count) {
+		this.product = product;
+		this.count = count;
+	}
+
 	public Product getProduct() {
 		return product;
 	}
+
 	public void setProduct(Product product) {
 		this.product = product;
 	}
@@ -17,6 +24,9 @@ public class ItemInvoice {
 		this.count = count;
 	}
 	
+	public  Double calculateImport() {
+		return this.product.getPrice() * this.count;
+	}
 	
 	
 
